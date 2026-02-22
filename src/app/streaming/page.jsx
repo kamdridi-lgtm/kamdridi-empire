@@ -1,5 +1,4 @@
 export const dynamic = "force-dynamic";
-'use client';
 
 import StreamingHub from '@/components/Streaming/StreamingHub';
 
