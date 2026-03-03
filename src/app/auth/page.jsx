@@ -1,49 +1,39 @@
 "use client";
-
 export const dynamic = "force-dynamic";
-
 import React from 'react';
 
-export default function AuthPage() {
+export default function KamdridiHome() {
   return (
-    <div style={{ 
-      height: '100vh', 
-      width: '100vw',
-      margin: 0,
-      padding: 0,
-      backgroundImage: 'url("https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=2070&auto=format&fit=crop")', 
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      color: 'white',
-      fontFamily: 'sans-serif'
-    }}>
-      {/* Ton Logo Kamdridi */}
-      <div style={{ position: 'absolute', top: '40px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '3rem', letterSpacing: '5px', margin: 0 }}>KAMDRIDI</h1>
-        <p style={{ margin: 0, opacity: 0.8 }}>EMPIRE</p>
+    <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'sans-serif' }}>
+      
+      {/* HEADER / LOGO */}
+      <nav style={{ padding: '20px', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #333' }}>
+        <h1 style={{ fontSize: '2rem', letterSpacing: '8px', fontWeight: 'bold' }}>KAMDRIDI EMPIRE</h1>
+      </nav>
+
+      {/* SECTION HERO (IMAGE DE LA FEMME) */}
+      <div style={{ 
+        height: '80vh', 
+        backgroundImage: 'url("https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=2070&auto=format&fit=crop")', // On remplacera par ton fichier hero.png plus tard
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <div style={{ textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.6)', padding: '50px' }}>
+          <h2 style={{ fontSize: '5rem', margin: 0, lineHeight: '1' }}>TOO FAST</h2>
+          <h2 style={{ fontSize: '5rem', margin: 0 }}>TOO YOUNG</h2>
+        </div>
       </div>
 
-      {/* Ton texte principal */}
-      <div style={{ textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.5)', padding: '40px', borderRadius: '10px' }}>
-        <h2 style={{ fontSize: '4rem', margin: '0 0 10px 0' }}>TOO FAST</h2>
-        <h2 style={{ fontSize: '4rem', margin: '0 0 20px 0' }}>TOO YOUNG</h2>
-        <button style={{ 
-          backgroundColor: '#ff4d4d', 
-          color: 'white', 
-          border: 'none', 
-          padding: '15px 30px', 
-          fontSize: '1.2rem', 
-          fontWeight: 'bold',
-          cursor: 'pointer',
-          borderRadius: '5px'
-        }}>
-          UNLOCK ACCESS
-        </button>
+      {/* ZONE POUR TES 3000 PROCHAINS TRUCS (GRILLE) */}
+      <div style={{ padding: '50px 20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+        <div style={{ border: '1px solid #444', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Section 1 (Boutique)</div>
+        <div style={{ border: '1px solid #444', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Section 2 (Médias)</div>
+        <div style={{ border: '1px solid #444', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Section 3 (Events)</div>
       </div>
+
     </div>
   );
 }
